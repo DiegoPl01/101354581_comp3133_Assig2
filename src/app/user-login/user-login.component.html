@@ -1,0 +1,39 @@
+<div class="userContent">
+  <div class="userTitle">
+    <h1>Login</h1>
+  </div>
+  <form class="userForm" (ngSubmit)="login()">
+    <div>
+      <input
+        id="username_email"
+        name="username_email"
+        [(ngModel)]="user_username_email"
+        #username_email="ngModel"
+        required
+      />
+      <label for="username_email">Username or Email</label>
+    </div>
+    <div>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        [(ngModel)]="user_password"
+        #password="ngModel"
+        required
+      />
+      <label for="password">Password</label>
+    </div>
+    <div>
+        <button type="submit">Login</button>
+    </div>
+  </form>
+  <div *ngIf="username_email.invalid  && (username_email.dirty || username_email.touched)"  class="alert">
+    <div *ngIf="username_email.errors?.['required']">Username or Email is required.</div>
+  </div>
+
+  <div *ngIf="password.invalid  && (password.dirty || password.touched)"  class="alert">
+    <div *ngIf="password.errors?.['required']">Password is required.</div>
+  </div>
+  <p>{{error}}</p>  
+</div>

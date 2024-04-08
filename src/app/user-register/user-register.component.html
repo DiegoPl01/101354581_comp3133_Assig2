@@ -1,0 +1,49 @@
+<div class="userContent">
+  <div class="userTitle">
+    <h1>Register</h1>
+  </div>
+  <form class="userForm" (ngSubmit)="register()">
+    <div>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        [(ngModel)]="user_username"
+        required
+        #username="ngModel"
+      />
+      <label for="username">Username</label>
+    </div>
+    <div>
+      <input type="text" id="email" name="email" #email="ngModel" [(ngModel)]="user_email" required />
+      <label for="email">Email</label>
+    </div>
+    <div>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        #password="ngModel"
+        [(ngModel)]="user_password"
+        required
+      />
+      <label for="password">Password</label>
+    </div>
+    <div>
+      <button type="submit">Register</button>
+    </div>
+  </form>
+
+  <div *ngIf="username.invalid  && (username.dirty || username.touched)"  class="alert">
+    <div *ngIf="username.errors?.['required']">Name is required.</div>
+  </div>
+
+  <div *ngIf="email.invalid  && (email.dirty || email.touched)"  class="alert">
+    <div *ngIf="email.errors?.['required']">Email is required.</div>
+  </div>
+
+  <div *ngIf="password.invalid  && (password.dirty || password.touched)"  class="alert">
+    <div *ngIf="password.errors?.['required']">Password is required.</div>
+  </div>
+  <p>{{error}}</p>
+</div>

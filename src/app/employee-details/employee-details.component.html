@@ -1,0 +1,71 @@
+<div class="container">
+    
+  <header>
+    <h1>Employee Details</h1>
+  </header>
+  <div class="empContent" *ngIf="employee">
+    <form>
+      <div>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          value="{{employee.first_name}}"
+          required
+          readonly
+        />
+        <label for="firstName">First Name</label>
+      </div>
+      <div>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          value="{{employee.last_name}}"
+          readonly
+        />
+        <label for="lastName">Last Name</label>
+      </div>
+
+      <div>
+        <input
+        type="text"
+        id="gender"
+        name="gender"
+        value="{{employee.gender}}"
+        readonly
+        >
+        <label for="gender">Gender</label>
+      </div>
+
+      <div>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          value="{{employee.email}}"
+          required
+          readonly
+        />
+        <label for="email">Email</label>
+      </div>
+      <div>
+        <input
+          type="number"
+          id="salary"
+          name="salary"
+          value="{{employee.salary}}"
+          required
+          readonly
+        />
+        <label for="salary">Salary</label>
+      </div>
+      
+      <div>
+        <button type="button" (click)="goBack()">Go Back</button>
+      </div>
+    </form>
+
+  </div>
+
+</div>

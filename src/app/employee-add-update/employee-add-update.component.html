@@ -1,0 +1,77 @@
+<div class="container">
+  <header>
+    <h1>{{ employee.id ? "Update" : "Add" }} Employee</h1>
+  </header>
+
+  <div class="empContent">
+    <form (ngSubmit)="employee.id ? updateEmployee() : addEmployee()">
+      <div>
+        <input
+          type="text"
+          id="firstName"
+          name="firstName"
+          [(ngModel)]="employee.first_name"
+          required
+        />
+        <label for="firstName">First Name</label>
+      </div>
+      <div>
+        <input
+          type="text"
+          id="lastName"
+          name="lastName"
+          [(ngModel)]="employee.last_name"
+          required
+        />
+        <label for="lastName">Last Name</label>
+      </div>
+
+      <div>
+        <select
+          id="gender"
+          name="gender"
+          [(ngModel)]="employee.gender"       
+          required
+        >
+          <option value="Female">Female</option>
+          <option value="Male">Male</option>
+        </select>
+        <label for="gender">Gender</label>
+      </div>
+
+      <div>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          [(ngModel)]="employee.email"
+          required
+        />
+        <label for="email">Email</label>
+      </div>
+      <div>
+        <input
+          type="number"
+          id="salary"
+          name="salary"
+          [(ngModel)]="employee.salary"
+          required
+        />
+        <label for="salary">Salary</label>
+      </div>
+      
+      <div>
+        <button type="button" (click)="cancelOption()">
+          Cancel
+        </button>
+        <button type="submit">
+          {{ employee.id ? "Update" : "Add" }}
+        </button>
+      </div>
+    </form>
+
+    <div *ngIf="error">
+      <p>{{ error }}</p>
+    </div>
+  </div>
+</div>
