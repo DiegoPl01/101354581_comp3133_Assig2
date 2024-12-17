@@ -3,13 +3,19 @@ I hope you are doing well.
 
 For whomever it is reading this, on this repository you will find a personal project.
 This is a robust but scalable employee database that allows users/companies to perform CRUDS operations on its employees by
-using tools such as Angular, GraphQL, Node.js, Express, MongoDB, JWT, VCS & Heroku/Vercel to host it online. I hope you enjoy trying it. 
+using tools such as Angular, GraphQL, Node.js, Express, MongoDB, JWT, VCS & Heroku/Vercel to host it online. 
+Below you will find the online links to the frontend & backend deployed through vercel & the test info to try it on your own machine. 
+I hope you enjoy trying it. 
 
 Thank you, 
 Diego Plata.
 
-
-# 101354581_Comp3133_Assig2
+Link of Vercel Frontend: https://101354581-comp3133-assig2.vercel.app/
+Link of Vercel Backend: https://101354581-comp-3133-assignment1.vercel.app/
+OR
+Link of Heroku Backend: https://backend-assig2-diegoplata-8cbdeeb9d869.herokuapp.com/
+Test User ID: Diego or abc@gmail.com
+Test Password: $2b$12$OYtzRO2mEEhYRTuIfVAJ/uaD60YasPl.IwZjdIgBtNjKdSVnT0vSu
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
